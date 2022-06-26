@@ -20,22 +20,25 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Links    -->
-        <!-- <div class="collapse navbar-collapse justify-content-end nav-pills" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse justify-content-end nav-pills" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link" href="#project">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="team.html">Team</a>
+              <a class="nav-link" href="#methods">Methodology</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <!-- <li class="nav-item">
               <a class="nav-link" href="exploration.html">Exploration</a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a class="nav-link" href="solution.html">Solution</a>
-            </li>
+            </li> -->
           </ul>
-        </div>      -->
+        </div>     
       </div>
     </nav>
     <div class="container-xl coverhome text-white position-relative">
@@ -46,14 +49,14 @@
     </div>
 
     <!--Problem Statement Section, adapted from: https://www.w3schools.com/bootstrap5/bootstrap_jumbotron.php -->
-    <div class="container mt-5 p-5 bg-dark text-white rounded">
+    <div id = "project" class="container mt-5 p-5 bg-dark text-white rounded">
       <h1>The Project</h1>
       <p>More and more cities are adopting Green Infrastructure to ease environmental pressures and create beautiful urban environments. An important aspect of Green Infrastructure is the urban forest and urban canopy cover. Canopy cover is an important environmental asset that can positively impact a city's ability to handle climate change, extreme temperature changes, and reduce overall costs for the city.</p>
       <p>The City of Beaumont is a small municipality outside Edmonton, Alberta that has begun to expand its urban canopy cover to take advantage of these benefits. In 2021 the city created the Environmental Master Plan, which outlines how they will assess their environmental services. As part of their Environmental Master Plan, the City of Beaumont requires the current canopy cover to be digitized.  Through Fleming College they have contacted our team to digitize their current canopy cover, create a model that calculates future canopy cover, and develop web-based media to deliver this information.</p>
       <p>The team has worked with Beaumont's current LiDAR data, Aerial Imagery, Tree Inventory, and Base Data to create an interactive web application that visualizes the city's current and future canopy cover. This application simultaneously serves three purposes: to raise awareness on the city's efforts to strengthen their urban forests, to allow the city's employees to access detailed statistics on canopy coverage, and to allow the public to submit service requests for specific trees.</p>  
       <h3>More information will be available here soon!</h3>
     </div>
-    <div class="container mt-5 p-5 bg-dark text-white rounded">
+    <div id="methods" class="container mt-5 p-5 bg-dark text-white rounded">
       <h1>Methodology</h1>
       <p>Team.13 identified the following core deliverables that will enable the City of Beaumont to promote and interact with their current and future urban canopy. </p>
       <h3>1 - Canopy Layers</h3>
@@ -62,6 +65,39 @@
       <p>Before we could model canopy growth species specific characteristics had to be obtained that would allow us to project future canopy expansion. This included maximum spread, maximum height, and growth rate. The current canopy was first modelled forward to 2021 by using the species expected height increase over that duration to calculate the expansion of canopy based on the growth rate of the species. An ArcGIS Notebook was created that uses the same model but adjusted to allow the user to simulate a range of growth conditions, to create projected canopy layers in five, ten, and fifteen years. The created Notebook makes use of the ArcGIS API for Python and can be rerun without breaking integration with the final web experiences. </p>
       <h3>3 - ArcGIS Experiences and Story Map</h3>
       <p>In total two ArcGIS experiences were created, one meant for the cities residents to interact with the urban canopy, and the other for city employee to access advanced statistics on canopy cover. These experiences were created using ArcGIS Experience Builder for Developers to allow us to program a slider widget that allowed the user to view projected canopy in five, ten, and fifteen years. Additionally, a custom theme was created so that the user interface matched the client media. Integrated into both experiences is a Survey123 form that allowed the user to submit service requests on the public side and manage these submissions on the internal side. Finally the team also created a Story Map that highlights the current status of Beaumont’s urban forest, initiatives within the city to promote their canopy, and has an immersive 3D scene that includes public trees and all buildings in the city. </p>
+    </div>
+    <div id="team" class="container mt-5 p-5 bg-dark text-white rounded">
+      <h1>Team.13</h1>
+    <!--Team cards, developed using: https://getbootstrap.com/docs/5.1/components/card/ -->
+    <div class="row mt-3 mx-2">
+      <div class="col-lg mt-3">
+        <div class="card h-100 bg-dark text-white rounded">
+          <img src="images/Ridley.jpg" class="card-img-top p-5 rounded-circle" alt="Ridley Soudack">
+          <div class="card-body">
+            <h3>Ridley Soudack</h3>
+            <p>Currently enrolled in Fleming College's graduate GIS Specialist certificate program, Ridley brings experience in a range of web and software development environments to the team. With professional history as a project manager working with Agile methodologies, Ridley is accustomed to working iteratively to build innovative technological solutions to complex, evolving problems. A keen eye to detail and strong aptitude to coding and web development make Ridley Team.13’s Web Development Specialist. Ridley has experience building scripts and web solutions with Python, JavaScript, HTML/CSS and jQuery, and is confident designing usable, accessible interfaces for web products.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg mt-3">
+        <div class="card h-100 bg-dark text-white rounded">
+          <img src="images/Victor1.jpg" class="card-img-top p-5 rounded-circle" alt="Victor Toth">
+          <div class="card-body">
+            <h3>Victor Toth</h3>
+            <p>With a degree in Geology from the University of Toronto and currently working towards a graduate certificate in GIS Applications at Fleming College, Victor brings a foundational knowledge of the geosciences to the team. His field-work experience combined with working closely with engineers and surveyors, allow him to effectively communicate and understand various technical and geo-spatial technologies. Leveraging previous academic and work experience with remote sensing technology make him best suited for the Technology Specialist.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg mt-3">
+        <div class="card h-100 bg-dark text-white rounded">
+          <img src="images/Zach.png" class="card-img-top p-5 rounded-circle" alt="Zachary Masson">
+          <div class="card-body">
+            <h3>Zachary Masson</h3>
+            <p>With a degree in Human Geography from Concordia University and experience working with climate scientists for multiple universities, his experience working with environmental proxies and geospatial data makes him best suited for the Environmental Specialist role in Team.13. Past work included environmental modelling of ancient ecosystems to assess past climate change, plant image analysis accuracy assessments, as well as sediment core processing/ pollen identification. </p>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <!--Footer-->
     <div class="d-flex bg-dark text-white mt-4 py-3 justify-content-center">
