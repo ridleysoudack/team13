@@ -52,63 +52,8 @@
         <a class="nav-link sectiontab" data-bs-toggle="tab" href="#story">Story Map</a>
       </li>
     </ul>
-  </div>
-    
-<!--Canopy Layers tab-->
-  <div class="tab-pane container-lg" id="story">
-    <div class="mt-4 px-4 py-2 bg-dark text-white rounded">
-      <h1>Canopy Layer Production</h1>
-          <p class="m-1">The screenshots below provide a summary of the canopy layer production process as well as examples of the final canopy layer polygons.</p>
-    </div>  
-     <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col mt-2">
-          <div class="card">
-            <img class="card-img-top" src="images/LidarData.PNG" alt="Screenshot of LiDAR data.">
-            <div class="card-body bg-dark text-white">
-              <h5 class="card-title">LiDAR Point Cloud</h5>
-              <p class="card-text">We began with classified LiDAR data where points classied as Medium and High vegetation were isolated to create initial polygon layers.</p>
-            </div>
-          </div>
-        </div>
-     <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col mt-2">
-          <div class="card">
-            <img class="card-img-top" src="images/LidarError.PNG" alt="Screenshot of LiDAR data errors.">
-            <div class="card-body bg-dark text-white">
-              <h5 class="card-title">LiDAR Misclassification</h5>
-              <p class="card-text">A large amount of LiDAR points were misclassified that needed to be corrected or removed. Objects such as corners of roofs, signs, streetlights, etc. were manually removed to create a clean polygon layer.</p>
-            </div>
-          </div>
-        </div>       
-      <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col mt-2">
-          <div class="card">
-            <img class="card-img-top" src="images/TreeSegmentation.PNG" alt="Screenshot of Tree Segmentation.">
-            <div class="card-body bg-dark text-white">
-              <h5 class="card-title">Tree Stand Segmentation</h5>
-              <p class="card-text">In areas of closely spaced trees, canopies would blend together and were not discernible in LiDAR data. For inventoried trees, these polgyons needed to be segmented into individual canopies which was done manually. </p>
-            </div>
-          </div>
-        </div>      
-       <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col mt-2">
-          <div class="card">
-            <img class="card-img-top" src="images/FinalCanopy.PNG" alt="Screenshot of the final Tree Canopy.">
-            <div class="card-body bg-dark text-white">
-              <h5 class="card-title">Final Tree Canopy Layers</h5>
-              <p class="card-text">Once the canopy layers were validated, various operations were performed to smooth and simplify the polygons. Data from tree inventory points were joined to the canopy polygons which was used with our growth model to 'grow' the canopy from 2017 to the present day.</p>
-            </div>
-          </div>
-        </div>  
-        
-<!--Growth Model tab-->
-  <div class="tab-pane container-lg" id="story">
-    <div class="mt-4 px-4 py-2 bg-dark text-white rounded">
-      <h1>Tree Growth Model</h1>
-          <p class="m-1">The screenshots below provide a summary of the growth model devleopment.</p>
-    </div>     
-    
-    
+  </div>  
+
     <!-- Tab panes -->
   <div class="tab-content">
     <!--Experience tab-->
