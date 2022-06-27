@@ -26,13 +26,13 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="team.html">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="exploration.html">Exploration</a>
+              <a class="nav-link" href="index.html#methods">Methodology</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="solution.html">Solution</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#team">Team</a>
             </li>
           </ul>
         </div>
@@ -40,78 +40,200 @@
     </nav>
   <div class="container-lg mt-3">
     <h1>Developed Solutions</h1>
-    <h4>Click the tabs below to access our ArcGIS Experience and ArcGIS Story Map implementations.</h4>
+    <h4>Click the tabs below to view our different solutions.</h4>
   </div>
    <!-- Nav pills, taken from: https://www.w3schools.com/bootstrap5/bootstrap_navs.php -->
   <div class="container-fluid mt-4">
     <ul class="nav nav-tabs" role="group">
       <li class="nav-item">
-        <a class="nav-link sectiontab active" data-bs-toggle="tab" href="#experience">Experience</a>
+        <a class="nav-link sectiontab active" data-bs-toggle="tab" href="#Canopy">Tree Canopy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link sectiontab" data-bs-toggle="tab" href="#growthmodel">Growth Model</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link sectiontab" data-bs-toggle="tab" href="#experience">Experience</a>
       </li>
       <li class="nav-item">
         <a class="nav-link sectiontab" data-bs-toggle="tab" href="#story">Story Map</a>
       </li>
     </ul>
   </div>
-    <!-- Tab panes -->
+     
+    
+<!-- Tab panes -->
   <div class="tab-content">
+    
+    <!--Canopy Layers tab-->
+    <div class="tab-pane container-lg active" id="Canopy">
+        <div class="mt-4 px-4 py-2 bg-dark text-white rounded">
+          <h1>Canopy Layer Production</h1>
+              <p class="m-1">The screenshots below provide a summary of the canopy layer production process as well as examples of the final canopy layer polygons.</p>
+                
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div class="col mt-2">
+            <div class="card">
+              <img class="card-img-top" src="images/LidarData.PNG" alt="Screenshot of LiDAR data.">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">LiDAR Point Cloud</h5>
+                <p class="card-text">We began with classified LiDAR data where points classied as Medium and High vegetation were isolated to create initial polygon layers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col mt-2">
+            <div class="card">
+              <img class="card-img-top" src="images/LidarError.PNG" alt="Screenshot of LiDAR data errors.">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">LiDAR Misclassification</h5>
+                <p class="card-text">A large amount of LiDAR points were misclassified that needed to be corrected or removed. Objects such as corners of roofs, signs, streetlights, etc. were manually removed to create a clean polygon layer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col mt-2">
+            <div class="card">
+              <img class="card-img-top" src="images/TreeSegmentation.PNG" alt="Screenshot of Tree Segmentation.">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">Tree Stand Segmentation</h5>
+                <p class="card-text">In areas of closely spaced trees, canopies would blend together and were not discernible in LiDAR data. For inventoried trees, these polgyons needed to be segmented into individual canopies which was done manually. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col mt-2">
+            <div class="card">
+              <img class="card-img-top" src="images/FinalCanopy.PNG" alt="Screenshot of the final Tree Canopy.">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">Final Tree Canopy Layers</h5>
+                <p class="card-text">Once the canopy layers were validated, various operations were performed to smooth and simplify the polygons. Data from tree inventory points were joined to the canopy polygons which was used with our growth model to 'grow' the canopy from 2017 to the present day.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+    <!--Growth Model tab-->
+    <div class="tab-pane container-lg" id="growthmodel">
+          <div class="mt-4 px-4 py-2 bg-dark text-white rounded">
+              <h1>Tree Growth Model</h1>
+                  <p class="m-1">The screenshots below provide a summary of the growth model devleopment.</p>
+              </div>        
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col mt-2">
+              <div class="card">
+                <img class="card-img-top" src="images/Notebook.PNG" alt="Screenshot of Notebook">
+                <div class="card-body bg-dark text-white">
+                  <h5 class="card-title">ArcGIS Notebook</h5>
+                  <p class="card-text">The ArcGIS Notebook contains two parts. Part 1 consists of Setup and creating initial canopy layers. Part 2 models the amount of growth for each inventoried tree and applies a buffer distance to the canopy polygons to grow them based on the specificed parameters.</p>
+                </div>
+              </div>
+            </div>    
+          <div class="row row-cols-1 row-cols-lg-1">  
+                <div class="col mt-2">
+                  <div class="card">
+                    <img class="card-img-top" src="images/modellastone.PNG" alt="Screenshot of Tree Growth Example">
+                    <div class="card-body bg-dark text-white">
+                      <h5 class="card-title">Example of Tree Growth</h5>
+                      <p class="card-text">In this image we can see an example of the results of the growth model. The inner dashed line represents the canopy extent in 2017. The outer dashed line is the modeled growth of the canopy in 5 years to 2021.</p>
+                    </div>
+                  </div>
+                </div>      
+            </div>    
+            <div class="row row-cols-1 row-cols-lg-1">  
+              <div class="col mt-2">
+                <div class="card">
+                  <img class="card-img-top" src="images/modeloutput1.PNG" alt="Screenshot of Tree Growth Example">
+                  <div class="card-body bg-dark text-white">
+                    <h5 class="card-title">Created Canopy (Buffers)</h5>
+                    <p class="card-text">Canopies were created through buffering based on expected growth. In this image you can see the overlap that needed to be removed (Monique St). Light green polygons within the buffers are present day canopy.</p>
+                  </div>
+                </div>
+              </div>      
+          </div> 
+          <div class="row row-cols-1 row-cols-lg-1">  
+            <div class="col mt-2">
+              <div class="card">
+                <img class="card-img-top" src="images/modeloutput2.PNG" alt="Screenshot of Tree Growth Example">
+                <div class="card-body bg-dark text-white">
+                  <h5 class="card-title">Created Canopy (Dissolved)</h5>
+                  <p class="card-text">Upclose image of the dissolved buffers.</p>
+                </div>
+              </div>
+            </div>      
+        </div> 
+        <div class="row row-cols-1 row-cols-lg-1">  
+          <div class="col mt-2">
+            <div class="card">
+              <img class="card-img-top" src="images/modeloputs3.PNG" alt="Screenshot of Tree Growth Example">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">Species that have reached Max Spread</h5>
+                <p class="card-text">When species have reached their maximum canopy spread buffers are not created. In this image there are a number of species that have reached their maximum.</p>
+              </div>
+            </div>
+          </div>      
+      </div> 
+      </div>
+    </div>
+   
+    
     <!--Experience tab-->
-    <div class="tab-pane container-lg active" id="experience">
+    <div class="tab-pane container-lg" id="experience">
       <div class="mt-4 px-4 py-2 bg-dark text-white rounded">
         <h1>ArcGIS Experience</h1>
             <p class="m-1">The screenshots below provide a record of the various elements of our ArcGIS Experience implementation. Click this button to explore the Experience directly:</p>
-              <a role="button" target="_blank" class="btn tryme mx-auto" href="https://experience.arcgis.com/experience/322c43d3561d4f009191a4ed8d92e9fe">Try it</a>
+              <a role="button" target="_blank" class="btn tryme mx-auto" href="https://ridleysoudack.github.io/team13/foresthub/">Try it</a>
       </div>
       <div class="row row-cols-1 row-cols-lg-2">
         <div class="col mt-2">
           <div class="card">
-            <img class="card-img-top" src="images/ExpSolution1.png" alt="Screenshot of Experience">
+            <img class="card-img-top" src="images/ExperienceMain.PNG" alt="Screenshot of Experience">
             <div class="card-body bg-dark text-white">
-              <h5 class="card-title">Welcome Pop-up</h5>
-              <p class="card-text">Pop-up configured to appear when landing on the experience, providing information on the tool.</p>
+              <h5 class="card-title">Experience Landing Page</h5>
+              <p class="card-text">The initial view of the ArcGIS Experience. Statistics are automatically calculated when the user zooms or pans the view.</p>
             </div>
           </div>
         </div>
         <div class="col mt-2">
           <div class="card">
-            <img class="card-img-top" src="images/ExpSolution2.png" alt="Screenshot of Experience">
+            <img class="card-img-top" src="images/ExpTreeDetails.PNG" alt="Screenshot of Tree Details">
             <div class="card-body bg-dark text-white">
-              <h5 class="card-title">Tree Inventory View</h5>
-              <p class="card-text">View providing a breakdown of trees and canopy cover in current map extent. Allows for filtering of trees by species type.</p>
+              <h5 class="card-title">Tree Details Tab</h5>
+              <p class="card-text">Users can also select a single tree and view additional details on the Tree Details Tab.</p>
             </div>
           </div>
         </div>
         <div class="col mt-2">
           <div class="card">
-            <img class="card-img-top" src="images/ExpSolution3.png" alt="Screenshot of Experience">
+            <img class="card-img-top" src="images/ExpHoods.PNG" alt="Screenshot of Neighbourhood View">
             <div class="card-body bg-dark text-white">
-              <h5 class="card-title">Neighbourhoods/Parks View</h5>
-              <p class="card-text">View allowing for exploration of canopy coverage statistics for particular neighbourhoods and parks within the city.</p>
+              <h5 class="card-title">Neighbourhoods/Parks/Streets View</h5>
+              <p class="card-text">View allowing for exploration of canopy coverage statistics for particular neighbourhoods, parks, and streets within the city.</p>
             </div>
           </div>
         </div>
         <div class="col mt-2">
           <div class="card">
-            <img class="card-img-top" src="images/ExpSolution4.png" alt="Screenshot of Experience">
+            <img class="card-img-top" src="images/ExpServiceRequests.PNG" alt="Screenshot of Service Requests">
             <div class="card-body bg-dark text-white">
               <h5 class="card-title">Service Request View</h5>
-              <p class="card-text">View with integrated survey widget, allowing users to submit service requests for individual trees.</p>
+              <p class="card-text">View that receives service requests from Survey123. Users can view and modify the status and details of each request as they are completed.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <!--Story map tab-->
     <div class="tab-pane container-lg" id="story">
       <div class="mt-4 px-4 py-2 bg-dark text-white rounded">
         <h1>ArcGIS Story Map</h1>
             <p class="m-1">The screenshots below provide a record of the various elements of our ArcGIS Story Map implementation. Click this button to explore the Story Map directly:</p>
-              <a role="button" target="_blank" class="btn tryme mx-auto" href="https://storymaps.arcgis.com/stories/23be24704f58444d80524308e7a115d7">Try it</a>
+              <a role="button" target="_blank" class="btn tryme mx-auto" href="https://storymaps.arcgis.com/stories/37a69cdc790347c0abd161e8bf0ff735">Try it</a>
       </div>
       <div class="row row-cols-1 row-cols-lg-2">
         <div class="col mt-2">
           <div class="card">
-            <img class="card-img-top" src="images/StorySolution1v2.png" alt="Screenshot of Experience">
+            <img class="card-img-top" src="images/StoryMapLanding.PNG" alt="Screenshot of Story Map Landing">
             <div class="card-body bg-dark text-white">
               <h5 class="card-title">Story Map Landing</h5>
               <p class="card-text">Landing panel set up when users first arrive at Story Map.</p>
@@ -120,19 +242,28 @@
         </div>
         <div class="col mt-2">
           <div class="card">
-            <img class="card-img-top" src="images/StorySolution2v2.png" alt="Screenshot of Experience">
+            <img class="card-img-top" src="images/CanopyCoverageStats.PNG" alt="Screenshot of Canopy Coverage Statistics">
             <div class="card-body bg-dark text-white">
-              <h5 class="card-title">Text and Image Content</h5>
-              <p class="card-text">One example of the images and text that form the Story Map.</p>
+              <h5 class="card-title">Summary of Canopy Coverage Percentage.</h5>
+              <p class="card-text">Canopy coverage percentages calculated from LiDAR created tree polygons throughout the city. Our growth model was also used to predict future canopy coverage percentage.</p>
             </div>
           </div>
         </div>
         <div class="col mt-2">
           <div class="card">
-            <img class="card-img-top" src="images/StorySolution3v2.png" alt="Screenshot of Experience">
+            <img class="card-img-top" src="images/3DScene2.PNG" alt="Screenshot of 3D Scene">
             <div class="card-body bg-dark text-white">
               <h5 class="card-title">3D Scene</h5>
-              <p class="card-text">Scene allowing for 3D exploration of trees in Beaumont, with tree models styled according to real tree height.</p>
+              <p class="card-text">3D map allowing for exploring the tree inventory in the city. Trees are symbolized according to class as well as height. 3D buildings were also created from LiDAR data to provide more context to the viewer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-2">
+          <div class="card">
+            <img class="card-img-top" src="images/MapTour.PNG" alt="Screenshot of Map Tour">
+            <div class="card-body bg-dark text-white">
+              <h5 class="card-title">Park Map Tour</h5>
+              <p class="card-text">Map tour allowing visitors to travek to each Park in the city. Digitized canopy is shown for each park.</p>
             </div>
           </div>
         </div>
