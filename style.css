@@ -39,7 +39,7 @@ body {
 .tryme { /* This is styling for the "Try It" Button linking to final solutions */
     background-color: rgb(255, 165, 0);
     color: white;
-    width: 100%;
+    width: 40%;
     max-width: 900px;
     display: block;
     transition: 0.4s;
